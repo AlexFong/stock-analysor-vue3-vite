@@ -1,6 +1,6 @@
 <template>
 	<div class="stock-list">
-		<el-table :data="list" style="width: 100%">
+		<el-table :data="list" @row-click="toDetail" style="width: 100%">
 			<el-table-column :key="v.label" v-bind="v" v-for="v in tableColumn" />
 		</el-table>
 	</div>
@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
+import { useRouter } from 'vue-router'
 import StockList from "./StockList"
 
 export default defineComponent({
@@ -20,7 +21,14 @@ export default defineComponent({
       { label: '名称', prop: 'cName', width: '180' },
       { label: '财务分', prop: 'financeHealth', width: '180' },
     ]
-    return { list, tableColumn };
+
+    const router = useRouter()
+    const toDetail = (stock: any) => {
+      const { code, market, cName, financeHealth } = stock
+      router.push({ name: 'stockdetail', query: { code, market, cName, financeHealth } })
+    }
+
+    return { list, tableColumn, toDetail };
   },
 });
 </script>
