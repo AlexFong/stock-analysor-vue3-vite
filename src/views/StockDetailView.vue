@@ -10,7 +10,6 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     console.log(route, route.params)
-
     return {};
   },
 });
