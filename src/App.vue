@@ -6,7 +6,7 @@
 					<el-col :span="6">
 						<nav class="nowrap">
 							<RouterLink to="/">Home</RouterLink>
-							<RouterLink to="/about">About</RouterLink>
+							<RouterLink to="/about">宏观/美林时钟/PMI/CPM...</RouterLink>
 							<RouterLink to="/stocklist">StockList</RouterLink>
 						</nav>
 					</el-col>
