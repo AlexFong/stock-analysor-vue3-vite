@@ -1,6 +1,12 @@
 import Cookies from 'js-cookie'
 
-const cookies = {}
+interface _Cookies {
+  set: Function,
+  get: Function,
+  getAll: Function,
+  remove: Function,
+}
+const cookies = {} as _Cookies
 
 /**
  * @description 存储 cookie 值

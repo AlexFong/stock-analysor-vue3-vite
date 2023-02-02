@@ -2,9 +2,9 @@
 @import './common.scss';
 
 #app {
-	width: 90vw;
-	margin: 0 auto;
-	padding: 0 2vw;
+	/* width: 90vw; */
+	/* margin: 0 auto; */
+	/* padding: 0 2vw; */
 
 	font-weight: normal;
 }

@@ -11,7 +11,7 @@
 						</nav>
 					</el-col>
 					<el-col :span="6">
-						<h2 class="title nowrap">Stock Analysor</h2>
+						<h2 class="title nowrap"></h2>
 					</el-col>
 					<el-col :span="6">icon</el-col>
 				</el-row>
@@ -37,6 +37,7 @@ import { RouterLink, RouterView } from 'vue-router'
 		width: 100%;
 		display: flex;
 		align-items: center;
+		background-color: #fff;
 
 		.row-bg {
 			width: 100%;
@@ -63,11 +64,17 @@ import { RouterLink, RouterView } from 'vue-router'
 		}
 	}
 
+	.el-main {
+		width: 1024px;
+		margin: 0 auto;
+		min-height: 80vh;
+	}
+
 	@media (min-width: 1024px) {
 		header {
 			display: flex;
 			place-items: center;
-			padding-right: calc(var(--section-gap) / 2);
+			// padding-right: calc(var(--section-gap) / 2);
 		}
 
 		nav {
